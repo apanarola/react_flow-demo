@@ -1,0 +1,286 @@
+{
+    "prepareData": {
+      "fields": [
+        {
+          "name": "Instance name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter instance name"
+        },
+        {
+          "name": "Query",
+          "type": "textarea",
+          "rows": 10,
+          "cols": 25,
+          "required": true,
+          "placeholder": "Enter your query here"
+        }
+      ]
+    },
+    "exportData": {
+      "fields": [
+        {
+          "name": "Instance name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter instance name"
+        },
+        {
+          "name": "Data Input",
+          "type": "select",
+          "helperText": "Connected in canvas",
+          "required": true,
+          "options": [
+            { "label": "Option 1", "value": "option1" },
+            { "label": "Option 2", "value": "option2" },
+            { "label": "Option 3", "value": "option3" },
+            { "label": "Option 4", "value": "option4" }
+          ],
+          "placeholder": "Select data input"
+        },
+        {
+          "name": "Filetype",
+          "type": "select",
+          "helperText": "Connected in canvas",
+          "required": true,
+          "options": [
+            { "label": "CSV", "value": "csv" },
+            { "label": "Excel", "value": "excel" },
+            { "label": "JSON", "value": "json" }
+          ],
+          "placeholder": "Select file type"
+        },
+        {
+          "name": "Recipients",
+          "type": "select",
+          "helperText": "",
+          "required": false,
+          "options": [
+            { "label": "Recipient 1", "value": "recipient1" },
+            { "label": "Recipient 2", "value": "recipient2" },
+            { "label": "Recipient 3", "value": "recipient3" }
+          ],
+          "placeholder": "Select recipient"
+        },
+        {
+          "name": "Columns to export",
+          "type": "custom_checkbox",
+          "options": [
+            { "name": "Column1", "isChecked": true },
+            { "name": "Column2", "isChecked": false },
+            { "name": "Column3", "isChecked": false },
+            { "name": "Column4", "isChecked": true },
+            { "name": "Column5", "isChecked": false }
+          ],
+          "placeholder": "Select columns to export",
+          "required": false
+        }
+      ]
+    },
+    "tableView": {
+      "fields": [
+        {
+          "name": "Instance name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter instance name"
+        },       
+        {
+          "name": "Table Columns",
+          "type": "navigate",
+          "list": [
+            { "name": "Configure column1" },
+            { "name": "Configure column2" },
+            { "name": "Configure column3" },
+            { "name": "Configure column4" },
+            { "name": "Configure column5" }
+          ]
+        }
+      ]
+    },
+    "Nested Table View": {
+      "fields": [
+        {
+          "name": "Column label",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter column label"
+        },
+        {
+          "name": "Data Column",
+          "type": "select",
+          "required": true,
+          "placeholder": "Select data column",
+          "options": [
+            { "label": "Column1", "value": "column1" },
+            { "label": "Column2", "value": "column2" },
+            { "label": "Column3", "value": "column3" },
+            { "label": "Column4", "value": "column4" }
+          ]
+        },
+        {
+          "name": "Column format",
+          "type": "select",
+          "required": true,
+          "placeholder": "Select data type",
+          "options": [
+            { "label": "Text", "value": "text" },
+            { "label": "Number", "value": "number" },
+            { "label": "Date", "value": "date" }
+          ]
+        }
+      ]
+    },
+    "dashboardView": {
+      "fields": [
+        {
+          "name": "Instance name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter instance name"
+        },
+        {
+          "name": "Data Input",
+          "type": "select",
+          "required": true,
+          "helperText": "",
+          "options": [
+            { "label": "Dashboard Data 1", "value": "dashboard1" },
+            { "label": "Dashboard Data 2", "value": "dashboard2" },
+            { "label": "Dashboard Data 3", "value": "dashboard3" }
+          ],
+          "placeholder": "Select data input"
+        },
+        {
+          "name": "Configure dashboard cards",
+          "type": "navigate",
+          "list": [
+            { "name": "Donut chart", "isIndication": true, "isBullet": true, "bulletType": "number" },
+            { "name": "Bar chart", "isIndication": true, "isBullet": true, "bulletType": "number" },
+            { "name": "Data table", "isIndication": true, "isBullet": true, "bulletType": "number" }
+            
+          ]
+        }
+      ]
+    },
+    "Nested Dashboard View - Donut Chart": {
+      "fields": [
+        {
+          "name": "Chart title",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter chart title"
+        },
+        {
+          "name": "Data column",
+          "type": "select",
+          "required": true,
+          "placeholder": "Select data column",
+          "helperText": "Connected in canvas",
+          "options": [
+            { "label": "Column1", "value": "column1" },
+            { "label": "Column2", "value": "column2" },
+            { "label": "Column3", "value": "column3" }
+          ]
+        }
+      ]
+    },
+    "Nested Dashboard View - Bar Chart": {
+      "fields": [
+        {
+          "name": "Chart title",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter chart title"
+        },
+        {
+          "name": "X-axis data column",
+          "type": "select",
+          "required": true,
+          "placeholder": "Select data column",
+          "options": [
+            { "label": "Column1", "value": "column1" },
+            { "label": "Column2", "value": "column2" },
+            { "label": "Column3", "value": "column3" }
+          ]
+        },
+        {
+          "name": "X-axis label",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter X-axis label"
+        },
+        {
+          "name": "Y-axis data column",
+          "type": "select",
+          "required": true,
+          "placeholder": "Select data column",
+          "options": [
+            { "label": "Column1", "value": "column1" },
+            { "label": "Column2", "value": "column2" },
+            { "label": "Column3", "value": "column3" }
+          ]
+        },
+        {
+          "name": "Y-axis label",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter Y-axis label"
+        }
+      ]
+    },
+    "Nested Dashboard View - Data Table": {
+      "fields": [
+        {
+          "name": "Table title",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter table title"
+        },
+        {
+          "name": "Table columns",
+          "type": "navigate",
+          "list": [
+            { "name": "Column1" },
+            { "name": "Column2" },
+            { "name": "Column3" },
+            { "name": "Column4" },
+            { "name": "Column5" }
+          ]
+        }
+      ]
+    },
+    "Nested Data Table": {
+      "fields": [
+        {
+          "name": "Column label",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter column label"
+        },
+        {
+          "name": "Data Column",
+          "type": "select",
+          "required": true,
+          "placeholder": "Select data column",
+          "options": [
+            { "label": "Column1", "value": "column1" },
+            { "label": "Column2", "value": "column2" },
+            { "label": "Column3", "value": "column3" }
+          ]
+        },
+        {
+          "name": "Column format",
+          "type": "select",
+          "required": true,
+          "placeholder": "Select data type",
+          "options": [
+            { "label": "Text", "value": "text" },
+            { "label": "Number", "value": "number" },
+            { "label": "Date", "value": "date" }
+          ]
+        }
+      ]
+    }
+  }
+  
